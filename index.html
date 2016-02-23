@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Schemaorg by joejoeknight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Schemaorg</h1>
+      <h2 class="project-tagline">Schema.org - schemas and (appengine) software</h2>
+      <a href="https://github.com/joejoeknight/schemaorg" class="btn">View on GitHub</a>
+      <a href="https://github.com/joejoeknight/schemaorg/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/joejoeknight/schemaorg/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="welcome-to-schemaorg" class="anchor" href="#welcome-to-schemaorg" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to Schema.org</h1>
+
+<p>This is the Schema.org project repository. It contains all the schemas, examples and software use to publish schema.org. For the site itself, please see <a href="http://schema.org/">http://schema.org/</a> instead.</p>
+
+<p>Issues and proposals are managed here by participants of the W3C Schema.org Community Group.
+See <a href="http://www.w3.org/community/schemaorg">http://www.w3.org/community/schemaorg</a> for the group. If you are interested to participate please
+join the group at W3C, introduce yourself and find or file issues here that engage your interest. If you are new to Git and GitHub, there's a useful <a href="https://www.w3.org/2006/tools/wiki/Github">introduction to Github</a> in the W3C Wiki.</p>
+
+<p>Issue #1 (<a href="https://github.com/schemaorg/schemaorg/issues/1">https://github.com/schemaorg/schemaorg/issues/1</a>) in Github is an entry point for release planning. It 
+should provide an overview of upcoming work, in terms of broad themes, specific issues and release milestones.</p>
+
+<p>Our next milestone release has the working name 'sdo-ganymede'. See
+<a href="https://github.com/schemaorg/schemaorg/issues/510">https://github.com/schemaorg/schemaorg/issues/510</a> for an entry point, or else navigate issues via label or milestone withing Github. Every change to the site comes via discussions here. Substantive changes are recorded in our <a href="http://schema.org/docs/releases.html">release notes</a>. A preview of the <a href="http://sdo-ganymede.appspot.com/docs/releases.html#sdo-ganymede">draft new release notes</a> can be found as part of the test site for our next release. Every month or so, after final review by the Schema.org Steering Group, we make a formal release. </p>
+
+<h1>
+<a id="software" class="anchor" href="#software" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Software</h1>
+
+<p>For most collaborators, all you need to know about the software is how to run it. Essentially you will need to have the Python version of Google App Engine SDK running on the platform of your choice. You can then make test builds of schema.org running on your own machine accessible as http://localhost:8080/ or else post them on appspot.com for collaboration. See <a href="https://cloud.google.com/appengine/docs">https://cloud.google.com/appengine/docs</a> for details. </p>
+
+<p>More information about the software is also available in <a href="SOFTWARE_README.md">SOFTWARE_README.md</a></p>
+
+<p>See also notes in the wiki: <a href="https://github.com/schemaorg/schemaorg/wiki/Contributing">https://github.com/schemaorg/schemaorg/wiki/Contributing</a></p>
+
+<h1>
+<a id="formats-and-standards" class="anchor" href="#formats-and-standards" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Formats and standards</h1>
+
+<p>All schemas and examples are in data/ in utf-8 encoded files.</p>
+
+<p>The main schemas file is data/schema.rdfa (utf-8)</p>
+
+<p>While developing schemas, using data/sdo-somethinghere-schema.rdfa can be useful.</p>
+
+<p>The format is based on W3C RDFS in HTML/RDFa format, see <a href="http://schema.org/docs/datamodel.html">http://schema.org/docs/datamodel.html</a></p>
+
+<p>The examples are stored in data/examples.txt (utf-8) and other *.txt files.</p>
+
+<p>As with schemas, data/*examples.txt will also be read. It can be useful to develop
+using separate files. When vocabulary is finally integrated into the main repository, schema
+data will be merged into schema.org. However examples will stay in separate files, as this
+works better with git's file comparison machinery.</p>
+
+<p>The data/releases/ hierarchy is reserved for release snapshots (see <a href="http://schema.org/version/">http://schema.org/version/</a>).</p>
+
+<p>The ext/*/ hierarchy is reserved for extensions (see <a href="http://schema.org/docs/extension.html">http://schema.org/docs/extension.html</a>).</p>
+
+<h1>
+<a id="github-branch-naming" class="anchor" href="#github-branch-naming" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Github Branch naming</h1>
+
+<p><a href="http://schema.org/docs/releases.html">http://schema.org/docs/releases.html</a> lists releases by working codename and release name.</p>
+
+<p>We began using Ghostbusters character names (<a href="http://en.wikipedia.org/wiki/Ghostbusters#Cast">http://en.wikipedia.org/wiki/Ghostbusters#Cast</a>)
+sdo-stantz, sdo-venkman, sdo-stantz; inspired by <a href="http://schema.org/Role">http://schema.org/Role</a> discussions.</p>
+
+<p>e.g. successor to <a href="http://schema.org/docs/releases.html#v1.91">http://schema.org/docs/releases.html#v1.91</a> was code-named sdo-venkman, 
+and eventually became <a href="http://schema.org/docs/releases.html#v1.92">http://schema.org/docs/releases.html#v1.92</a></p>
+
+<p>You can therefore see candidate draft release notes in the Git repository at docs/releases.html</p>
+
+<p>As of May 2015, our next release will be called sdo-ganymede. The default branch in Github
+is named after the release. <a href="https://en.wikipedia.org/wiki/Ganymede_(moon)">https://en.wikipedia.org/wiki/Ganymede_(moon)</a> ... subsequent names
+will be in this general direction.</p>
+
+<h1>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Notes</h1>
+
+<p>This documentation concerns the software codebase rather than schema.org itself. </p>
+
+<p>However do note that labels, comments, and documentation should use US English (in the code
+and schemas), if a choice between English variants is needed. Please aim for international 
+English wherever possible.</p>
+
+<p>See also: <a href="https://twitter.com/schemaorg_dev">https://twitter.com/schemaorg_dev</a></p>
+
+<h1>
+<a id="-" class="anchor" href="#-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>## ###</h1>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/joejoeknight/schemaorg">Schemaorg</a> is maintained by <a href="https://github.com/joejoeknight">joejoeknight</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
